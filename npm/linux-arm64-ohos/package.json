@@ -1,0 +1,19 @@
+{
+  "name": "@rollup/rollup-linux-arm64-ohos",
+  "version": "0.0.0",
+  "os": [
+    "openharmony"
+  ],
+  "cpu": [
+    "arm64"
+  ],
+  "files": [
+    "rollup.linux-arm64-ohos.node"
+  ],
+  "description": "Native bindings for Rollup",
+  "author": "Lukas Taegert-Atkinson",
+  "homepage": "https://rollupjs.org/",
+  "license": "MIT",
+  "repository": "rollup/rollup",
+  "main": "./rollup.linux-arm64-ohos.node"
+}

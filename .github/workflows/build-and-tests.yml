@@ -138,6 +138,9 @@ jobs:
             target: aarch64-linux-android
             build: npm run build:napi -- --release --target aarch64-linux-android --use-napi-cross
           - host: ubuntu-latest
+            target: aarch64-unknown-linux-ohos
+            build: npm run build:napi -- --release --target aarch64-unknown-linux-ohos --use-napi-cross
+          - host: ubuntu-latest
             target: riscv64gc-unknown-linux-gnu
             setup: |
               sudo apt-get update
@@ -210,6 +213,9 @@ jobs:
         with:
           toolchain: nightly-2025-07-25
           targets: ${{ matrix.settings.target }}
+      - name: Setup OpenHarmony SDK
+        if: ${{ contains(matrix.settings.target, 'ohos') }}
+        uses: openharmony-rs/setup-ohos-sdk@10564ad8040178be4aa02e0d3a2c25c32779fa3f # v0.2
       - name: Restore Cargo cache
         uses: actions/cache/restore@5a3ec84eff668545956fd18022155c47e93e2684 # v4.2.3
         with:
