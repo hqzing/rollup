@@ -1,6 +1,6 @@
 # rollup changelog
 
-## 4.48.1-0
+## 4.48.2
 
 xxxxxxxxx
 
